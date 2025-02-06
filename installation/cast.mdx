@@ -1,6 +1,53 @@
 ---
-title: 'Installing Cast'
-description: 'How to run queries on your own data'
+title: 'Installing and setting up Cast'
+description: 'How to install and setup Cast on your own device.'
 icon: 'magnifying-glass-chart'
 ---
+## Installation
+Open windows powershell and run:
+```
+pip install -U exakt-cast
+```
+
+From powershell run:
+```
+cast
+```
+
+This should open the Cast app in your browser. 
+
+## Set up
+
+Once the installation is done and the cast app is up and running it is time to set up your directory. 
+
+Open the directory and check that the Cast directory is setup correctly. The following folders should be in the directory: 
+```
+Cast/
+├── configs/
+├── data/
+│   ├── export/
+│   └── source/
+├── queries/
+└── settings.json
+```
+
+### Data folder
+
+The **source** folder is where all the data sources you want to query should be saved. To use a data source in the Cast app, ensure the file is placed in this folder.
+
+The **export** folder stores Parquet files generated when query results are exported. If you have exported the output of a query, you can find it in this folder.
+
+### Queries
+
+The **queries** folder is where all queries written in the Cast app will be saved. Queries are only saved when the save button is selected, as there is no auto-save functionality. 
+
+### Configs
+
+The **configs** folder contains saved data visualizations from the Data Viewer tab. These visualizations are stored as JSON files in the PyGwalker file format and can also be directly opened by PyGwalker.
+
+### Settings
+
+This is a json file that sets all the settings for the Cast app. 
+
+
 
