@@ -1,22 +1,47 @@
 ---
 title: Introduction
-description: "Welcome to the Cast documentation"
+description: "
+Cast is a lightweight, powerful utility. Designed to enable actuaries, data scientists, and pricing professionals to easily run analytical queries on local CSV and Parquet files. 
+Built on top of DuckDB, this tool allows users to leverage SQL-like queries for rapid exploration and analysis of their data without requiring a complex database setup.
+"
 ---
 
 <img
   className="block dark:hidden"
-  src="/images/hero-light.svg"
+  src="/images/cast.webp"
   alt="Hero Light"
 />
 <img
   className="hidden dark:block"
-  src="/images/hero-dark.svg"
+  src="/images/cast.webp"
   alt="Hero Dark"
 />
 
+### Features
+
+**Query Local Files:** Run SQL queries directly on CSV and Parquet files stored locally.
+
+**Ease of Use:** Simple streamlit webapp to run and manage your queries on.
+
+**Blazing Fast Analytics:** Powered by DuckDB, optimized for analytical queries on large datasets.
+
+**Lightweight:** No database setup or configuration required—just point to your files and start querying.
+
+**Extensibility:** Designed for pricing and actuarial workflows but flexible enough for general-purpose analytics.
+
+### Who Should Use Cast?
+
+This tool is perfect for:
+
+**Actuaries:** Quickly explore insurance data, summarize portfolios, and validate assumptions.
+
+**Data Scientists:** Perform ad-hoc analysis on datasets without loading them into a database.
+
+**Pricing Professionals:** Join, clean and analyze datasets that can be used in your pricing models.
+
 ## Setting up
 
-The first step to world-class documentation is setting up your editing environments.
+The first step to world-class data processing and analysis is setting up your python environment and install the cast app.
 
 <CardGroup cols={2}>
   <Card
@@ -24,20 +49,20 @@ The first step to world-class documentation is setting up your editing environme
     icon="python"
     href="installation/python"
   >
-    Get your docs set up locally for easy development
+    Follow the step by step process to install and setup python locally. 
   </Card>
   <Card
     title="Installing Cast"
     icon="server"
     href="installation/cast"
   >
-    Preview your changes before you push to make sure they're perfect
+    Install cast using your terminal. 
   </Card>
 </CardGroup>
 
 ## How to use Cast
 
-Update your docs to your brand and add valuable content for the best user conversion.
+View the detailed docs for each of the main functions within the Cast app. 
 
 <CardGroup cols={2}>
   <Card
@@ -45,21 +70,21 @@ Update your docs to your brand and add valuable content for the best user conver
     icon="code"
     href="essentials/query-editor"
   >
-    Customize your docs to your company's colors and brands
+    Write queries to your heart's desire.
   </Card>
   <Card
     title="One-way views"
     icon="chart-line"
     href="essentials/one-way-views"
   >
-    Automatically generate endpoints from an OpenAPI spec
+    Generate simple one-way views of the queried data. 
   </Card>
   <Card
     title="Data viewer"
     icon='magnifying-glass-chart'
     href="essentials/data-viewer"
   >
-    Build interactive features and designs to guide your users
+    Build complex visualisations of the queried data.
   </Card>
   <Card
     title="Configure your setup"
