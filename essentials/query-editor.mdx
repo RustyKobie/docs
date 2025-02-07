@@ -4,16 +4,26 @@ description: 'How to run queries on your own data'
 icon: 'code'
 ---
 
-![title](images/query_editor.png)
+The Editor provides a simple interface for writing your own SQL queries using DuckDB.
+
+Once you place a flat file in the cast/data/sources folder, a generated query will appear in the editor, which you can further refine.
+The generated query attempts to replace all missing values with NULL and convert any columns containing numbers to a numeric format. This is particularly useful when exporting data to Parquet—an optimised storage format that preserves column types and significantly reduces storage requirements. This not only speeds up data transfer between servers but also improves performance when reading the data into R or Python scripts.
+
+![The Editor](images/query_editor.png)
+
+
 
 1. Data tab that will open the query editor.
-2. Dataset drop down menu from which the dataset for the generic query can be selected. 
-3. Run button that will run the query in the editor. 
+2. Dataset drop down menu from which the dataset for the generic query can be selected. This will display all the contents in your data/source folder in the cast directory.
+3. Run button that will run the query in the editor, the output will be displayed below it. 
 4. Export button that will export the output of the query to a Parquet file that can be found in the export folder in the Cast directory.  
 5. Save button that will save the query and can then be found in the query folder in the Cast directory. 
 6. Delete button that will delete the query from the directory. 
 7. Refresh button that can be used to refresh the directory if new data has been added. 
 8. Query Editor in which a SQL query can be written. 
+
+After you press the run, the results are returned in a table below the Editor. 
+
 
 ![title](images/query_output.png)
 
@@ -36,7 +46,7 @@ icon: 'code'
 - Click the "Run" button in the left sidebar.
 - A results table will appear below the query editor.
 
-### Step 4: Analyze Results
+### Step 4: Analyse Results
 - Review the generated data table
 - Utilise table features:
   - Enlarge table using the expansion button (top right).
@@ -55,12 +65,25 @@ icon: 'code'
 
 ## Frequently Asked Questions:
 
+- Can I only query data in the Cast directory?
+    - No, you’re not limited to the Cast directory. Since the platform uses DuckDB under the hood, you can query data from any source supported by DuckDB. 
+    This includes: 
+      - Network drives  
+      - S3 buckets  
+      - URLs  
+
+
 - How do I query multiple different flat files in one query?
     - To query a flat file you will only need to reference the file path where it is stored. 
     - As a example use the file path generated from the pre-populated query and substitute the file name. 
 
 - Is it possible to create a temporary table in the query editor or will I have to embed all of the tables?
     - You are welcome to embed tables but the best approach may be to use CTE's. 
+
+- I copied my file into the data/source folder, why is there not a query showing up?
+    - Just press refresh and then it should appear for selection. 
+
+
 
 
 

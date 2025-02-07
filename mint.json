@@ -41,12 +41,21 @@
       ]
     },
     {
+      "group": "Installation",
+      "pages": [
+        "installation/python",
+        "installation/cast"
+      ]
+    },
+
+
+    {
       "group": "How to use Cast",
       "pages": [
-        "essentials/settings",
         "essentials/query-editor",
         "essentials/one-way-views",
-        "essentials/data-viewer"
+        "essentials/data-viewer",
+        "essentials/settings"
       ]
     }
   ],

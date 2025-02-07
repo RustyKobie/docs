@@ -1,18 +1,21 @@
 ---
 title: 'Global Settings'
-description: 'Cast allows you to specify certain detail.'
+description: 'Cast allows you to customise your setup.'
 icon: 'gear'
 ---
 
-In the Cast Directory you will find the **settings.json** file. Upon opening the file you will see the following editable lists:
+In the Cast Directory you will find the **settings.json** file.
+This JSON file contains all the settings used by the cast app. When you run cast for the first time it is populated with some default values.
+Should you want to change any of the settings you can just make the changes in the  **settings.json** file and restart the Cast app.
 
 ### Missing values
 
-This setting allows you to setup what should be treated as a missing value in your dataset. You can add and remove to the list as you please. 
+This setting allows you select which values should be treated as a missing value in your dataset. You can add and remove to the list as you please. There are some common defaults included to make it easier to get started.
 
 ### Numeric Seperator
 
-This setting allows you to change what should be seen as a decimal seperator in your data. Common examples may be "," or ".". 
+This setting allows you to change what should be seen as a decimal seperator in numeric data. Common examples may be "," or "."
+This setting is used when we try and identify numeric columns to cast. Typically this is required when data is exported to CSV and is not read in as a numeric data type.
 
 ### Interactive Limit
 
